@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "NobitEx New Tab",
+  "description": "صفحه اصلی سفارشی برای تب جدید کروم با استفاده از NobitEx.",
+  "version": "1.0.0",
+  "chrome_url_overrides": {
+    "newtab": "index.html"
+  },
+  "icons": {
+    "16": "images/logo/nobin_icon_transparent.png",
+    "48": "images/logo/nobin_icon_transparent.png",
+    "128": "images/logo/nobin_icon_transparent.png"
+  }
+}
