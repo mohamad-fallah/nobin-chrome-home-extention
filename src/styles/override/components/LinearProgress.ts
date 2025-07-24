@@ -1,17 +1,19 @@
+import type { Theme } from "@mui/material/styles";
 import getVariables from "../variables";
 
-const variables = getVariables("light");
-
-const MuiLinearProgress = {
-  styleOverrides: {
-    root: {
-      height: variables.progressBarHeight,
-      borderRadius: variables.progressRadius,
-      background: variables.progressTrackColor,
+const MuiLinearProgress = (theme: Theme) => {
+  const variables = getVariables(theme.palette.mode);
+  return {
+    styleOverrides: {
+      root: {
+        height: variables.progressBarHeight,
+        borderRadius: variables.progressRadius,
+        background: variables.progressTrackColor,
+      },
+      bar: {
+        background: variables.progressBarColor,
+      },
     },
-    bar: {
-      background: variables.progressBarColor,
-    },
-  },
+  };
 };
 export default MuiLinearProgress;

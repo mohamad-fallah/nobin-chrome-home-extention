@@ -1,19 +1,21 @@
+import type { Theme } from "@mui/material/styles";
 import getVariables from "../variables";
 
-const variables = getVariables("light");
-
-const MuiStepLabel = {
-  styleOverrides: {
-    label: {
-      fontSize: variables.stepLabelFontSize,
-      color: variables.palette.text.primary,
+const MuiStepLabel = (theme: Theme) => {
+  const variables = getVariables(theme.palette.mode);
+  return {
+    styleOverrides: {
+      label: {
+        fontSize: variables.stepLabelFontSize,
+        color: variables.palette.text.primary,
+      },
+      active: {
+        color: variables.palette.primary.main,
+      },
+      completed: {
+        color: variables.palette.success.main,
+      },
     },
-    active: {
-      color: variables.palette.primary.main,
-    },
-    completed: {
-      color: variables.palette.success.main,
-    },
-  },
+  };
 };
 export default MuiStepLabel;

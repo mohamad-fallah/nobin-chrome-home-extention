@@ -1,16 +1,18 @@
+import type { Theme } from "@mui/material/styles";
 import getVariables from "../variables";
 
-const variables = getVariables("light");
-
-const MuiDrawer = {
-  styleOverrides: {
-    paper: {
-      width: variables.drawerWidth,
-      boxShadow: variables.drawerElevation ? variables.shadow : "none",
-      background: variables.palette.background.paper,
-      color: variables.palette.text.primary,
+const MuiDrawer = (theme: Theme) => {
+  const variables = getVariables(theme.palette.mode);
+  return {
+    styleOverrides: {
+      paper: {
+        width: variables.drawerWidth,
+        boxShadow: variables.drawerElevation ? variables.shadow : "none",
+        background: variables.palette.background.paper,
+        color: variables.palette.text.primary,
+      },
     },
-  },
+  };
 };
 
 export default MuiDrawer;

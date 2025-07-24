@@ -13,10 +13,15 @@ import AdminPanelSettingsIcon from "@mui/icons-material/AdminPanelSettings";
 import SyncIcon from "@mui/icons-material/Sync";
 import LoginIcon from "@mui/icons-material/Login";
 import FLex from "../../../components/Flex";
+import useThemeMode from "../../../hooks/useThemeMode";
+import LightModeIcon from "@mui/icons-material/LightMode";
+import DarkModeIcon from "@mui/icons-material/DarkMode";
 
 interface HeaderProps {}
 
 const Header: FC<HeaderProps> = () => {
+  const { mode, toggleMode } = useThemeMode();
+
   return (
     <AppBar position="static" color="transparent" sx={{ width: "100%" }}>
       <Toolbar
@@ -61,6 +66,16 @@ const Header: FC<HeaderProps> = () => {
           <Tooltip title="تنظیمات" placement="bottom" arrow>
             <IconButton color="inherit" aria-label="تنظیمات">
               <SettingsIcon sx={{ fontSize: 24 }} />
+            </IconButton>
+          </Tooltip>
+
+          <Tooltip
+            title={mode === "light" ? "تاریک کن" : "روشن کن"}
+            placement="bottom"
+            arrow
+          >
+            <IconButton onClick={toggleMode} sx={{ ml: 2 }}>
+              {mode === "light" ? <DarkModeIcon /> : <LightModeIcon />}
             </IconButton>
           </Tooltip>
         </FLex>

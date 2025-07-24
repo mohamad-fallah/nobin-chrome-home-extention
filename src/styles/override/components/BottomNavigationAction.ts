@@ -1,16 +1,18 @@
+import type { Theme } from "@mui/material/styles";
 import getVariables from "../variables";
 
-const variables = getVariables("light");
-
-const MuiBottomNavigationAction = {
-  styleOverrides: {
-    root: {
-      color: variables.palette.text.primary,
-      fontSize: variables.iconSize,
+const MuiBottomNavigationAction = (theme: Theme) => {
+  const variables = getVariables(theme.palette.mode);
+  return {
+    styleOverrides: {
+      root: {
+        color: variables.palette.text.primary,
+        fontSize: variables.iconSize,
+      },
+      selected: {
+        color: variables.palette.primary.main,
+      },
     },
-    selected: {
-      color: variables.palette.primary.main,
-    },
-  },
+  };
 };
 export default MuiBottomNavigationAction;

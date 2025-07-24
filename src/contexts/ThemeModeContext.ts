@@ -1,11 +1,11 @@
 import { createContext } from "react";
 
-export interface ThemeModeContextProps {
+export interface ThemeModeContextType {
   mode: "light" | "dark";
   toggleMode: () => void;
 }
 
-const ThemeModeContext = createContext<ThemeModeContextProps | undefined>(
+const ThemeModeContext = createContext<ThemeModeContextType | undefined>(
   undefined
 );
 

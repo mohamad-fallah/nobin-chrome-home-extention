@@ -1,25 +1,27 @@
-import { useMemo, useState, type FC, type ReactNode } from "react";
-import { ThemeProvider } from "@mui/material";
+import { useState, type FC, useMemo, useCallback } from "react";
+import type { ReactNode } from "react";
+import { ThemeProvider } from "@mui/material/styles";
+import ThemeModeContext from "../contexts/ThemeModeContext";
 import { createAppTheme } from "../styles/theme";
-import ThemeModeContext, {
-  type ThemeModeContextProps,
-} from "../contexts/ThemeModeContext";
 
-export const ThemeModeProvider: FC<{ children: ReactNode }> = ({
-  children,
-}) => {
-  const [mode, setMode] = useState<"light" | "dark">("dark");
+interface ThemeModeProviderProps {
+  children: ReactNode;
+}
 
-  const toggleMode = () =>
-    setMode((prev) => (prev === "dark" ? "light" : "dark"));
+const ThemeModeProvider: FC<ThemeModeProviderProps> = ({ children }) => {
+  const [mode, setMode] = useState<"light" | "dark">("light");
+
+  const toggleMode = useCallback(() => {
+    setMode((prev) => (prev === "light" ? "dark" : "light"));
+  }, []);
 
   const theme = useMemo(() => createAppTheme(mode), [mode]);
 
-  const contextValue: ThemeModeContextProps = { mode, toggleMode };
-
   return (
-    <ThemeModeContext.Provider value={contextValue}>
+    <ThemeModeContext.Provider value={{ mode, toggleMode }}>
       <ThemeProvider theme={theme}>{children}</ThemeProvider>
     </ThemeModeContext.Provider>
   );
 };
+
+export default ThemeModeProvider;

@@ -1,13 +1,15 @@
+import type { Theme } from "@mui/material/styles";
 import getVariables from "../variables";
 
-const variables = getVariables("light");
-
-const MuiRadioGroup = {
-  styleOverrides: {
-    root: {
-      gap: variables.margin,
-      color: variables.palette.text.primary,
+const MuiRadioGroup = (theme: Theme) => {
+  const variables = getVariables(theme.palette.mode);
+  return {
+    styleOverrides: {
+      root: {
+        gap: variables.margin,
+        color: variables.palette.text.primary,
+      },
     },
-  },
+  };
 };
 export default MuiRadioGroup;

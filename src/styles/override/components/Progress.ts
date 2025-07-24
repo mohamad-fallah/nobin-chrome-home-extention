@@ -1,17 +1,19 @@
+import type { Theme } from "@mui/material/styles";
 import getVariables from "../variables";
 
-const variables = getVariables("light");
-
-const Progress = {
-  styleOverrides: {
-    root: {
-      height: variables.progressBarHeight,
-      borderRadius: variables.progressRadius,
-      background: variables.progressTrackColor,
+const Progress = (theme: Theme) => {
+  const variables = getVariables(theme.palette.mode);
+  return {
+    styleOverrides: {
+      root: {
+        height: variables.progressBarHeight,
+        borderRadius: variables.progressRadius,
+        background: variables.progressTrackColor,
+      },
+      bar: {
+        background: variables.progressBarColor,
+      },
     },
-    bar: {
-      background: variables.progressBarColor,
-    },
-  },
+  };
 };
 export default Progress;

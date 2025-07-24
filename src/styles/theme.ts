@@ -1,5 +1,4 @@
 import { createTheme } from "@mui/material";
-import override from "./override";
 import getVariables, { paletteLight, paletteDark } from "./override/variables";
 
 const getShadows = (shadow: string) =>
@@ -34,7 +33,6 @@ const getShadows = (shadow: string) =>
 export const createAppTheme = (mode: "light" | "dark" = "dark") => {
   const variables = getVariables(mode);
   return createTheme({
-    components: override,
     palette: {
       mode,
       ...(mode === "dark" ? paletteDark : paletteLight),
