@@ -67,5 +67,4 @@ export const createAppTheme = (mode: "light" | "dark" = "dark") =>
     },
   });
 
-// تم پیش‌فرض پروژه (dark)
 export const theme = createAppTheme("dark");
