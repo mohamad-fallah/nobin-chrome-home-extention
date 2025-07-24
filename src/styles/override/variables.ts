@@ -1,3 +1,153 @@
+const paletteLight = {
+  primary: {
+    main: "#1976d2",
+    light: "#42a5f5",
+    dark: "#1565c0",
+    contrastText: "#fff",
+  },
+  secondary: {
+    main: "#9c27b0",
+    light: "#ba68c8",
+    dark: "#7b1fa2",
+    contrastText: "#fff",
+  },
+  success: {
+    main: "#2e7d32",
+    light: "#4caf50",
+    dark: "#1b5e20",
+    contrastText: "#fff",
+  },
+  warning: {
+    main: "#ed6c02",
+    light: "#ff9800",
+    dark: "#e65100",
+    contrastText: "#fff",
+  },
+  error: {
+    main: "#d32f2f",
+    light: "#e57373",
+    dark: "#b71c1c",
+    contrastText: "#fff",
+  },
+  info: {
+    main: "#0288d1",
+    light: "#03a9f4",
+    dark: "#01579b",
+    contrastText: "#fff",
+  },
+  text: {
+    primary: "#212121",
+    secondary: "#757575",
+    disabled: "#bdbdbd",
+    hint: "#9e9e9e",
+    contrast: "#fff",
+  },
+  background: {
+    default: "#f5f5f5",
+    paper: "#fff",
+    appBar: "#222",
+    chip: "#e0e0e0",
+    avatar: "#bdbdbd",
+  },
+  border: {
+    main: "#e0e0e0",
+    dark: "#bdbdbd",
+    light: "#eeeeee",
+  },
+  divider: "#e0e0e0",
+  grey: {
+    50: "#fafafa",
+    100: "#f5f5f5",
+    200: "#eeeeee",
+    300: "#e0e0e0",
+    400: "#bdbdbd",
+    500: "#9e9e9e",
+    600: "#757575",
+    700: "#616161",
+    800: "#424242",
+    900: "#212121",
+  },
+  overlay: "rgba(0,0,0,0.5)",
+  white: "#fff",
+  black: "#000",
+  transparent: "transparent",
+};
+
+const paletteDark = {
+  primary: {
+    main: "#90caf9",
+    light: "#e3f2fd",
+    dark: "#1976d2",
+    contrastText: "#212121",
+  },
+  secondary: {
+    main: "#ce93d8",
+    light: "#f3e5f5",
+    dark: "#9c27b0",
+    contrastText: "#212121",
+  },
+  success: {
+    main: "#81c784",
+    light: "#e8f5e9",
+    dark: "#388e3c",
+    contrastText: "#212121",
+  },
+  warning: {
+    main: "#ffb74d",
+    light: "#fff3e0",
+    dark: "#f57c00",
+    contrastText: "#212121",
+  },
+  error: {
+    main: "#e57373",
+    light: "#ffebee",
+    dark: "#d32f2f",
+    contrastText: "#212121",
+  },
+  info: {
+    main: "#64b5f6",
+    light: "#e3f2fd",
+    dark: "#1976d2",
+    contrastText: "#212121",
+  },
+  text: {
+    primary: "#fff",
+    secondary: "#bdbdbd",
+    disabled: "#757575",
+    hint: "#9e9e9e",
+    contrast: "#212121",
+  },
+  background: {
+    default: "#18191a",
+    paper: "#23272f",
+    appBar: "#23272f",
+    chip: "#23272f",
+    avatar: "#bdbdbd",
+  },
+  border: {
+    main: "#23272f",
+    dark: "#18191a",
+    light: "#23272f",
+  },
+  divider: "#23272f",
+  grey: {
+    50: "#23272f",
+    100: "#23272f",
+    200: "#23272f",
+    300: "#23272f",
+    400: "#bdbdbd",
+    500: "#9e9e9e",
+    600: "#757575",
+    700: "#616161",
+    800: "#424242",
+    900: "#212121",
+  },
+  overlay: "rgba(0,0,0,0.7)",
+  white: "#fff",
+  black: "#000",
+  transparent: "transparent",
+};
+
 const variables = {
   // Border radius
   borderRadius: 12,
@@ -336,4 +486,5 @@ const variables = {
   },
 };
 
+export { paletteLight, paletteDark };
 export default variables;
