@@ -1,4 +1,6 @@
-import variables from "../variables";
+import getVariables from "../variables";
+
+const variables = getVariables("light");
 
 const MuiButton = {
   styleOverrides: {
@@ -17,4 +19,5 @@ const MuiButton = {
     },
   },
 };
+
 export default MuiButton;

@@ -1,4 +1,6 @@
-import variables from "../variables";
+import getVariables from "../variables";
+
+const variables = getVariables("light");
 
 const MuiDrawer = {
   styleOverrides: {
@@ -10,4 +12,5 @@ const MuiDrawer = {
     },
   },
 };
+
 export default MuiDrawer;

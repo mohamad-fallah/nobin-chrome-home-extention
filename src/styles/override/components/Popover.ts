@@ -1,4 +1,6 @@
-import variables from "../variables";
+import getVariables from "../variables";
+
+const variables = getVariables("light");
 
 const MuiPopover = {
   styleOverrides: {
@@ -11,4 +13,5 @@ const MuiPopover = {
     },
   },
 };
+
 export default MuiPopover;

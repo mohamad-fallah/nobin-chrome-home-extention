@@ -1,4 +1,6 @@
-import variables from "../variables";
+import getVariables from "../variables";
+
+const variables = getVariables("light");
 
 const MuiTooltip = {
   styleOverrides: {
@@ -12,4 +14,5 @@ const MuiTooltip = {
     },
   },
 };
+
 export default MuiTooltip;

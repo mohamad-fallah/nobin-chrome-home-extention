@@ -1,4 +1,6 @@
-import variables from "../variables";
+import getVariables from "../variables";
+
+const variables = getVariables("light");
 
 const MuiAlert = {
   styleOverrides: {
@@ -30,4 +32,5 @@ const MuiAlert = {
     },
   },
 };
+
 export default MuiAlert;
