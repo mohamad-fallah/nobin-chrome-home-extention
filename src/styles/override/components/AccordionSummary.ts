@@ -1,4 +1,13 @@
+import variables from "../variables";
+
 const MuiAccordionSummary = {
-  styleOverrides: {},
+  styleOverrides: {
+    root: {
+      minHeight: variables.buttonHeight,
+      padding: variables.padding,
+      background: variables.palette.background.paper,
+      color: variables.palette.text.primary,
+    },
+  },
 };
 export default MuiAccordionSummary;

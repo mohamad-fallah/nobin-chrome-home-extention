@@ -1,0 +1,14 @@
+import variables from "../variables";
+
+const MuiIconButton = {
+  styleOverrides: {
+    root: {
+      borderRadius: variables.borderRadius,
+      color: variables.palette.text.primary,
+      background: variables.palette.background.paper,
+      fontSize: variables.iconSize,
+      transition: `all ${variables.duration} ${variables.easing}`,
+    },
+  },
+};
+export default MuiIconButton;

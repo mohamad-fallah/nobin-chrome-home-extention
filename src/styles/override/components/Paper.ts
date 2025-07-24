@@ -1,9 +1,14 @@
+import variables from "../variables";
+
 const MuiPaper = {
   styleOverrides: {
     root: {
-      boxShadow: "0 4px 24px rgba(0,0,0,0.12)",
+      borderRadius: variables.paperRadius,
+      padding: variables.paperPadding,
+      boxShadow: variables.paperElevation ? variables.shadow : "none",
+      background: variables.palette.background.paper,
+      color: variables.palette.text.primary,
     },
   },
 };
-
 export default MuiPaper;
